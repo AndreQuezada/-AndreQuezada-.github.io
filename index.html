@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mundo de los Gatos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul class="tabs">
+            <li class="tab" onclick="openTab('info-general')">Inicio</li>
+            <li class="tab" onclick="openTab('contact')">Contacto</li>
+            <li class="tab" onclick="openTab('adoption')">Adopción</li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Bienvenido al Mundo de los Gatos</h1>
+    </header>
+    <main>
+        <section id="info-general" class="content">
+            <h2>Información General</h2>
+            <p>Los gatos son animales domésticos que han acompañado al ser humano desde hace miles de años. Son conocidos por su agilidad, curiosidad y gran capacidad de adaptación.</p>
+            <h2>Galería de Gatos</h2>
+            <img src="gato1.jpg" alt="Gato descansando">
+            <img src="gato2.jpg" alt="Gato jugando">
+            <img src="gato3.jpg" alt="Gato curioso">
+            <h2>Datos Curiosos</h2>
+            <ul>
+                <li>Los gatos pueden hacer más de 100 sonidos vocales diferentes.</li>
+                <li>Un gato puede saltar hasta 5 veces su altura en un solo salto.</li>
+                <li>Los gatos tienen bigotes sensibles para medir distancias y espacios.</li>
+                <li>Existen más de 500 millones de gatos domésticos en el mundo de 40 razas.</li>
+                <li>Los gatos hacen unos 100 sonidos y los perros solamente 10.</li>
+                <li>Son los animales con mayor oído.</li>
+                <li>Un gato que nace con un ojo azul normalmente es sordo de la oreja más cercana.</li>
+                <li>El gato más longevo vivió 34 años.</li>
+            </ul>
+        </section>
+        <section id="contact" class="content" style="display:none;">
+            <h1>Contacto</h1>
+            <p>Envíanos un mensaje a: correo@example.com</p>
+            <p>O llámanos al: +1234567890</p>
+        </section>
+        <section id="adoption" class="content" style="display:none;">
+            <h1>Información para Adopción</h1>
+            <p>Conoce el proceso y los requisitos para adoptar a un gatito y darle un hogar amoroso.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Mundo de los Gatos. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("content");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+        // Initial tab open
+        openTab('info-general');
+    </script>
+</body>
+</html>
